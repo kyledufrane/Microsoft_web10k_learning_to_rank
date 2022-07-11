@@ -115,9 +115,9 @@ def data_stats(folder_num):
         print(f'Total rows in testing set {folder}: {len_test}')
         print(f'Total rows in validation set {folder}: {len_val}')
         print('='*64)
-        print(f'The training set contains {round(len_train/total, 3)}% of the total data')
-        print(f'The testing set contains {round(len_test/total, 3)}% of the total data')
-        print(f'The validation set contains {round(len_val/total, 3)}% of the total data')
+        print(f'The training set contains {round(len_train/total, 2) * 100}% of the total data')
+        print(f'The testing set contains {round(len_test/total, 2) * 100}% of the total data')
+        print(f'The validation set contains {round(len_val/total, 2) * 100}% of the total data')
         print('='*64)
         
         # Create new dataframe showing NaN values
@@ -150,7 +150,7 @@ def data_stats(folder_num):
             print('='*64)
             print('*'*16 + ' ' + f'{k} Relevance Class Balance' + ' ' + '*'*16)
             for i in [0,1,2,3,4]:
-                print(f'Rank {i}: Total Count: {relevance_counts[i]} Percentage: {round(relevance_counts[i]/df_len,3)}')
+                print(f'Rank {i}: Total Count: {relevance_counts[i]} Percentage: {round(relevance_counts[i]/df_len,2) * 100}%')
         print(' ')
         
 # ==================================================================================================================================        
